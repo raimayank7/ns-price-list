@@ -1,7 +1,7 @@
 /* GST tool sites (gstin, hsn, price-list, gst-calendar): cards, result tables, print */
 .gt{margin-top:14px}
-.gt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
-@media (max-width:900px){.gt-grid{grid-template-columns:1fr}}
+/* two panels side by side only when each gets at least 680px (owner, 2026-11-05: half-width panels beside the side menu were hard to read) */
+.gt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,680px),1fr));gap:16px;align-items:start}
 .gt-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);min-width:0;margin:0 0 16px}
 .gt-card h2{font-size:1.15rem;margin:0 0 10px}
 .gt-card h3{font-size:1.05rem;margin:4px 0}
