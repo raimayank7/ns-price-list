@@ -49,6 +49,7 @@
 .hs-pick{width:100%;text-align:start;display:grid;grid-template-columns:auto 1fr;gap:2px 10px;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:8px 12px;color:var(--ink);font:inherit;cursor:pointer;min-height:44px}
 .hs-pick:hover{border-color:var(--accent)}
 .hs-pick small{grid-column:2;color:var(--soft);font-size:.8rem}
+.hs-chip{font-style:normal;font-weight:700;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:0 8px;margin-inline-start:8px;white-space:nowrap}.hs-chip.many{font-weight:600}
 .hs-cell{min-height:36px;padding:4px 8px;width:9.5em;font-size:.95rem}
 .hs-rate{width:5em}
 .gt-badge.warn{background:color-mix(in srgb,var(--warn,#B45309) 16%,transparent);color:var(--warn,#B45309)}
