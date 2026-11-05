@@ -65,6 +65,11 @@
 .hs-src{font-size:.82rem;margin-top:8px}
 .hs-use{margin-inline-end:6px}
 .hs-auto{color:var(--ok);font-size:.78rem;display:block;max-width:12em}
+.hs-opts{list-style:none;padding:0;margin:6px 0;display:grid;gap:6px}
+.hs-opts li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.hs-opts small{flex:1 1 14em;color:var(--soft);font-size:.8rem;overflow-wrap:anywhere}
+.hs-or{font-size:.78rem;color:var(--soft);text-transform:uppercase}
+.hs-svc{grid-template-columns:1fr}
 .hs-choose{margin-top:4px;max-width:16em;font-size:.82rem;min-height:32px}
 /* price list */
 .prl-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
