@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://price-list.niveshsahayak.in/sitemap.xml
