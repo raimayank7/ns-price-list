@@ -51,6 +51,21 @@
 .hs-pick small{grid-column:2;color:var(--soft);font-size:.8rem}
 .hs-cell{min-height:36px;padding:4px 8px;width:9.5em;font-size:.95rem}
 .hs-rate{width:5em}
+.gt-badge.warn{background:color-mix(in srgb,var(--warn,#B45309) 16%,transparent);color:var(--warn,#B45309)}
+.hs-sub{font-size:1rem;margin:16px 0 6px}
+.hs-ents{list-style:none;padding:0;margin:8px 0;display:grid;gap:8px}
+.hs-ent{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.hs-ent p{margin:0 0 4px;overflow-wrap:anywhere}
+.hs-ent small{color:var(--soft);font-size:.8rem;overflow-wrap:anywhere}
+.hs-ent details{margin-top:6px;font-size:.88rem}
+.hs-ent ol{margin:6px 0 0;padding-inline-start:1.4em;max-height:240px;overflow:auto}
+.hs-rt{font-weight:800;font-size:1.05rem;min-width:3.6em;text-align:center;border-radius:8px;padding:4px 6px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.hs-rt.nil{background:color-mix(in srgb,var(--ok) 14%,transparent);color:var(--ok)}
+.hs-part,.hs-chg{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:0 8px;margin-top:4px}
+.hs-src{font-size:.82rem;margin-top:8px}
+.hs-use{margin-inline-end:6px}
+.hs-auto{color:var(--ok);font-size:.78rem;display:block;max-width:12em}
+.hs-choose{margin-top:4px;max-width:16em;font-size:.82rem;min-height:32px}
 /* price list */
 .prl-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
 .prl-edit .prl-n{width:6.5em}
