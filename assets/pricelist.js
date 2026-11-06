@@ -8,7 +8,7 @@
   var KEY = 'ns-prl', COLS = ['code', 'hsn', 'unit', 'mrp', 'prate', 'wrate', 'rate', 'gst'], PRICES = ['mrp', 'prate', 'wrate', 'rate'];
   var EN = { title: 'Price list', item: 'Item', code: 'Code', hsn: 'HSN/SAC', unit: 'Unit', mrp: 'MRP', prate: 'Purchase price', wrate: 'Wholesale', rate: 'Retail', gst: 'GST %',
     incl: 'Prices include GST.', plus: 'GST extra as applicable.', from: 'Prices valid from', made: 'Made free at price-list.niveshsahayak.in', inr: 'All prices in ₹.' };
-  var DEF = { title: '', biz: '', from: '', gstNote: 'incl', sort: 'name', group: false, cols: { code: true, hsn: false, unit: true, mrp: true, prate: false, wrate: false, rate: true, gst: false }, skip: {} };
+  var DEF = { title: '', biz: '', from: '', gstNote: 'plus', sort: 'name', group: false, cols: { code: true, hsn: false, unit: true, mrp: true, prate: false, wrate: false, rate: true, gst: false }, skip: {} };
 
   var root, items = [], bizs = [], docs = [], S, dirty = {};
   function load() { var s = {}; try { s = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {} S = Object.assign({}, DEF, s); S.cols = Object.assign({}, DEF.cols, s.cols); S.skip = s.skip || {}; }
