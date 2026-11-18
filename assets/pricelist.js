@@ -7,7 +7,7 @@
   var NS = window.NS, $ = NS.$, $$ = NS.$$, esc = NS.esc, t = function (k, v) { return NS.t(k, v); };
   var KEY = 'ns-prl', COLS = ['code', 'hsn', 'unit', 'mrp', 'prate', 'wrate', 'rate', 'gst'], PRICES = ['mrp', 'prate', 'wrate', 'rate'];
   var EN = { title: 'Price list', item: 'Item', code: 'Code', hsn: 'HSN/SAC', unit: 'Unit', mrp: 'MRP', prate: 'Purchase price', wrate: 'Wholesale', rate: 'Retail', gst: 'GST %',
-    incl: 'Prices include GST.', plus: 'GST extra as applicable.', from: 'Prices valid from', made: 'Made free at price-list.niveshsahayak.in', inr: 'All prices in ₹.' };
+    incl: 'Prices include GST.', plus: 'GST extra as applicable.', from: 'Prices valid from', made: 'NSBiz by Nivesh Sahayak', inr: 'All prices in ₹.' };
   var DEF = { title: '', biz: '', from: '', gstNote: 'plus', sort: 'name', group: false, cols: { code: true, hsn: false, unit: true, mrp: true, prate: false, wrate: false, rate: true, gst: false }, skip: {} };
 
   var root, items = [], bizs = [], docs = [], S, dirty = {};
@@ -70,7 +70,7 @@
     var note = S.gstNote === 'incl' ? EN.incl : S.gstNote === 'plus' ? EN.plus : '';
     return head + '<table class="prl-tbl"><thead><tr><th class="n">#</th><th>' + EN.item + '</th>' + cs.map(function (c) { return '<th' + (PRICES.indexOf(c) >= 0 || c === 'gst' ? ' class="r"' : '') + '>' + EN[c] + '</th>'; }).join('') +
       '</tr></thead><tbody>' + (rows || '<tr><td colspan="' + (cs.length + 2) + '">-</td></tr>') + '</tbody></table>' +
-      '<p class="prl-foot">' + esc([EN.inr, note].filter(Boolean).join(' ')) + '<span>' + EN.made + '</span></p>';
+      '<p class="prl-foot">' + esc([EN.inr, note].filter(Boolean).join(' ')) + '</p>' + NS.creditLine('st-ft');
   }
 
   function drawSheet() { var s = $('[data-prl-sheet]', root); if (s) s.innerHTML = sheet(); var w = $('[data-prl-warn]', root); if (w) w.hidden = !S.cols.prate; }
