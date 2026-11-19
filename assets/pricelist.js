@@ -18,7 +18,7 @@
   function biz() { return bizs.filter(function (b) { return b.id === S.biz; })[0] || bizs[0] || null; }
 
   /* margin of the retail price over the purchase price, in % of purchase */
-  function margin(it) { var p = num(it.prate), r = num(it.rate); return p && r != null ? Math.round((r - p) / p * 1000) / 10 : null; }
+  function margin(it) { var p = num(it.prate), r = num(it.rate); return p && r ? Math.round((r - p) / r * 1000) / 10 : null; }   /* margin on the selling price, not markup (F4-14) */
   function issues(it) {
     var out = [], m = num(it.mrp), r = num(it.rate), w = num(it.wrate), p = num(it.prate);
     if (r == null) out.push(t('prl.e.norate'));
